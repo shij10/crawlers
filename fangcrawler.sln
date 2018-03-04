@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.27130.2036
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{888888A0-9F3D-457C-B088-3A5042F75D52}") = "fangcrawler", "fangcrawler.pyproj", "{9E07963B-D198-441A-A2DF-3D2177245F96}"
+Project("{888888A0-9F3D-457C-B088-3A5042F75D52}") = "fangcrawler", "fangcrawler.pyproj", "{01775130-6B1C-414E-AEF6-DC3D7E054476}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,13 +11,13 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{9E07963B-D198-441A-A2DF-3D2177245F96}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{9E07963B-D198-441A-A2DF-3D2177245F96}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{01775130-6B1C-414E-AEF6-DC3D7E054476}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{01775130-6B1C-414E-AEF6-DC3D7E054476}.Release|Any CPU.ActiveCfg = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
-		SolutionGuid = {D0C86A63-5959-465D-A99F-6D88DCA3FA7A}
+		SolutionGuid = {43FFD610-89AA-4C4A-B516-320BE5ACEFEE}
 	EndGlobalSection
 EndGlobal
