@@ -1,4 +1,4 @@
-# -*- coding: utf-8 -*-
+# coding=gbk
 
 # Define your item pipelines here
 #
@@ -9,9 +9,16 @@ import codecs
 import csv
 
 class FangCrawlerPipeline(object):
-    def process_item(self, item, spider):
-        #with codecs.open("example.csv",'a+','utf-8') as f:
+    def __init__(self):
+        self.file = codecs.open("results.csv",'w','utf_8_sig')
+        self.writer = csv.writer(self.file)
 
-        #    writer = csv.writer(f)
-        #    writer.writerow((item['name'].decode('gbk'), item['total_price'], item['average_price']))
+        self.writer.writerow(("名称","总价（万）","均价","成交日期","位置"))
+
+    def process_item(self, item, spider):
+        self.writer.writerow((item['name'], item['total_price'], item['average_price'], item['transaction_date'], item['location']))
+        
         return item
+
+    def __del__(self):
+        self.file.close()

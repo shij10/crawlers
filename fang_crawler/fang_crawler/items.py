@@ -13,3 +13,5 @@ class FangCrawlerItem(scrapy.Item):
     name = scrapy.Field()
     total_price = scrapy.Field()
     average_price = scrapy.Field()
+    transaction_date = scrapy.Field()
+    location = scrapy.Field()
