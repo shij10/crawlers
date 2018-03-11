@@ -1,22 +1,22 @@
 # -*- coding: utf-8 -*-
 
-# Scrapy settings for example project
+# Scrapy settings for fang_crawler project
 #
 # For simplicity, this file contains only settings considered important or
 # commonly used. You can find more settings consulting the documentation:
 #
-#     https://doc.scrapy.org/en/latest/topics/settings.html
-#     https://doc.scrapy.org/en/latest/topics/downloader-middleware.html
-#     https://doc.scrapy.org/en/latest/topics/spider-middleware.html
+#     http://doc.scrapy.org/en/latest/topics/settings.html
+#     http://scrapy.readthedocs.org/en/latest/topics/downloader-middleware.html
+#     http://scrapy.readthedocs.org/en/latest/topics/spider-middleware.html
 
-BOT_NAME = 'example'
+BOT_NAME = 'fang_crawler'
 
-SPIDER_MODULES = ['example.spiders']
-NEWSPIDER_MODULE = 'example.spiders'
+SPIDER_MODULES = ['fang_crawler.spiders']
+NEWSPIDER_MODULE = 'fang_crawler.spiders'
 
 
 # Crawl responsibly by identifying yourself (and your website) on the user-agent
-# The default user agent list composes chrome,I E,firefox,Mozilla,opera,netscape  
+#USER_AGENT = 'fang_crawler (+http://www.yourdomain.com)'
 USER_AGENTS = [
     "Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.1 (KHTML, like Gecko) Chrome/22.0.1207.1 Safari/537.1", 
     "Mozilla/5.0 (X11; CrOS i686 2268.111.0) AppleWebKit/536.11 (KHTML, like Gecko) Chrome/20.0.1132.57 Safari/536.11", 
@@ -45,7 +45,7 @@ ROBOTSTXT_OBEY = False
 #CONCURRENT_REQUESTS = 32
 
 # Configure a delay for requests for the same website (default: 0)
-# See https://doc.scrapy.org/en/latest/topics/settings.html#download-delay
+# See http://scrapy.readthedocs.org/en/latest/topics/settings.html#download-delay
 # See also autothrottle settings and docs
 DOWNLOAD_DELAY = 3
 # The download delay setting will honor only one of:
@@ -65,31 +65,31 @@ CONCURRENT_REQUESTS_PER_DOMAIN = 1
 #}
 
 # Enable or disable spider middlewares
-# See https://doc.scrapy.org/en/latest/topics/spider-middleware.html
+# See http://scrapy.readthedocs.org/en/latest/topics/spider-middleware.html
 #SPIDER_MIDDLEWARES = {
-#    'example.middlewares.ExampleSpiderMiddleware': 543,
+#    'fang_crawler.middlewares.FangCrawlerSpiderMiddleware': 543,
 #}
 
 # Enable or disable downloader middlewares
-# See https://doc.scrapy.org/en/latest/topics/downloader-middleware.html
-DOWNLOADER_MIDDLEWARES = { 
-    'example.middlewares.RotateUserAgentMiddleware' :400 
+# See http://scrapy.readthedocs.org/en/latest/topics/downloader-middleware.html
+DOWNLOADER_MIDDLEWARES = {
+    'fang_crawler.middlewares.RotateUserAgentMiddleware' :400 ,
 }
 
 # Enable or disable extensions
-# See https://doc.scrapy.org/en/latest/topics/extensions.html
+# See http://scrapy.readthedocs.org/en/latest/topics/extensions.html
 #EXTENSIONS = {
 #    'scrapy.extensions.telnet.TelnetConsole': None,
 #}
 
 # Configure item pipelines
-# See https://doc.scrapy.org/en/latest/topics/item-pipeline.html
+# See http://scrapy.readthedocs.org/en/latest/topics/item-pipeline.html
 ITEM_PIPELINES = {
-    'example.pipelines.ExamplePipeline': 300,
+    'fang_crawler.pipelines.FangCrawlerPipeline': 300,
 }
 
 # Enable and configure the AutoThrottle extension (disabled by default)
-# See https://doc.scrapy.org/en/latest/topics/autothrottle.html
+# See http://doc.scrapy.org/en/latest/topics/autothrottle.html
 #AUTOTHROTTLE_ENABLED = True
 # The initial download delay
 #AUTOTHROTTLE_START_DELAY = 5
@@ -102,7 +102,7 @@ ITEM_PIPELINES = {
 #AUTOTHROTTLE_DEBUG = False
 
 # Enable and configure HTTP caching (disabled by default)
-# See https://doc.scrapy.org/en/latest/topics/downloader-middleware.html#httpcache-middleware-settings
+# See http://scrapy.readthedocs.org/en/latest/topics/downloader-middleware.html#httpcache-middleware-settings
 HTTPCACHE_ENABLED = True
 HTTPCACHE_EXPIRATION_SECS = 0
 HTTPCACHE_DIR = 'httpcache'
