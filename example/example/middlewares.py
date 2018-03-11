@@ -5,8 +5,12 @@
 # See documentation in:
 # https://doc.scrapy.org/en/latest/topics/spider-middleware.html
 
-from scrapy import signals
+import random  
 
+from scrapy import signals
+from scrapy.downloadermiddlewares.useragent import UserAgentMiddleware
+
+from example.settings import USER_AGENTS
 
 class ExampleSpiderMiddleware(object):
     # Not all methods need to be defined. If a method is not defined,
@@ -101,3 +105,13 @@ class ExampleDownloaderMiddleware(object):
 
     def spider_opened(self, spider):
         spider.logger.info('Spider opened: %s' % spider.name)
+
+
+class RotateUserAgentMiddleware(UserAgentMiddleware):  
+    def process_request(self, request, spider):  
+ 
+        ua = random.choice(USER_AGENTS)  
+        if ua:  
+            print('User-Agent:'+ua)  
+            request.headers.setdefault('User-Agent', ua)  
+
