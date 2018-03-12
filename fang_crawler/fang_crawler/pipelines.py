@@ -10,7 +10,7 @@ import csv
 
 class FangCrawlerPipeline(object):
     def __init__(self):
-        self.file = codecs.open("results.csv",'w','utf_8_sig')
+        self.file = codecs.open("results1.csv",'w','utf_8_sig')
         self.writer = csv.writer(self.file)
 
         self.writer.writerow(("名称","总价（万）","均价","成交日期","位置"))
